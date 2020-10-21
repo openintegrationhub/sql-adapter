@@ -3,7 +3,7 @@
 const { expect } = require('chai');
 
 const { mysqlFetch } = require('./../lib/utils/mysql');
-// const { mssqlFetch } = require('./../lib/utils/mssql');
+const { mssqlFetch } = require('./../lib/utils/mssql');
 const { postgreFetch } = require('./../lib/utils/postgreSQL');
 
 
@@ -34,7 +34,7 @@ describe('Utils', () => {
     expect(result).to.equal(true);
   });
 
-  it.only('should connect to PostgreSQL', async () => {
+  it('should connect to PostgreSQL', async () => {
     const databaseConfig = {
       databaseType: 'PostgreSQL',
       user: 'postgres',
@@ -57,7 +57,26 @@ describe('Utils', () => {
     expect(result).to.equal(true);
   });
 
-  // postgreFetch(cfg, query, handlePostgreSQL);
-  //
-  // mssqlFetch(cfg, query, handleMSSQL);
+  it('should connect to SQL', async () => {
+    const databaseConfig = {
+      databaseType: 'SQL',
+      user: 'sa',
+      password: 'P@55w0rd',
+      databaseUrl: 'localhost',
+      port: '1433',
+      databaseName: 'testdb',
+    };
+    const query = 'SELECT * FROM testtable';
+
+    const results = [];
+    function handlePostgreSQL(data, last) {
+      console.log('Data:', data);
+      results.push(data);
+      if (last) console.log('All done');
+    }
+
+    const result = await mssqlFetch(databaseConfig, query, handlePostgreSQL, true);
+    // console.log('Result:', result);
+    expect(result).to.equal(true);
+  });
 });
