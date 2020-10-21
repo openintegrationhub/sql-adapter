@@ -14,8 +14,8 @@ describe('Utils', () => {
   it('should connect to mysql', async () => {
     const databaseConfig = {
       databaseType: 'MySQL',
-      user: 'testuser',
-      password: '14somestring',
+      user: 'root',
+      password: '',
       databaseUrl: 'localhost',
       port: '3306',
       databaseName: 'wice',
