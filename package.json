@@ -1,6 +1,6 @@
 {
   "name": "@oih/sql-adapter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "OIH Adapter for SQL",
   "homepage": "https://snazzycontacts.com/",
   "author": {
@@ -26,7 +26,7 @@
     "npm": ">=6.14"
   },
   "dependencies": {
-    "@openintegrationhub/ferryman": "^1.1.4",
+    "@openintegrationhub/ferryman": "^1.1.5",
     "mssql": "^6.2.3",
     "mysql2": "^2.2.5",
     "pg": "^8.4.1",
