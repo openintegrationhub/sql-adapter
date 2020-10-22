@@ -60,7 +60,7 @@ describe('DB read', () => {
     // console.log('Result:', result);
     expect(result).to.equal(true);
   });
-
+ 
   it.skip('should connect to SQL', async () => {
     const databaseConfig = {
       databaseType: 'SQL',
