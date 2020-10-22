@@ -4,7 +4,8 @@ const { expect } = require('chai');
 
 // const { mysqlFetch, mysqlExecute } = require('./../lib/utils/mysql');
 // const { mssqlFetch, mssqlExecute } = require('./../lib/utils/mssql');
-// const { postgreFetch, postgreExecute } = require('./../lib/utils/postgreSQL');
+// eslint-disable-next-line no-unused-vars
+const { postgreFetch, postgreExecute } = require('./../lib/utils/postgreSQL');
 
 describe('DB read', () => {
   before(async () => {
@@ -116,7 +117,7 @@ describe('DB write', () => {
   //   expect(result).to.equal(true);
   // });
   //
-  // it('should write to PostgreSQL DB', async () => {
+  // it.only('should write to PostgreSQL DB', async () => {
   //   const databaseConfig = {
   //     databaseType: 'PostgreSQL',
   //     user: 'postgres',
