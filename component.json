@@ -81,5 +81,14 @@
     }
   },
   "actions": {
+    "addData": {
+      "title": "Add Data to SQL database",
+      "description": "Executing SQL queries based on the supplied data",
+      "main": "./lib/actions/addData.js",
+      "metadata": {
+        "in": "./lib/schemas/addData.in.json",
+        "out": "./lib/schemas/addData.out.json"
+      }
+    }
   }
 }
