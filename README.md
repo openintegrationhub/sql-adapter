@@ -47,7 +47,7 @@ The **adapter** supports the following **actions** and **triggers**:
   Example:
 
   Query:
-  `INSERT INTO address_company (email) VALUES ("{email}")`
+  `INSERT INTO sometable (email) VALUES ('{email}')`
 
   payload:
 
@@ -55,9 +55,10 @@ The **adapter** supports the following **actions** and **triggers**:
 
   Will result in:
 
-  `INSERT INTO address_company (email) VALUES ("testmail@testmail.test")`
+  `INSERT INTO address_company (email) VALUES ('testmail@testmail.test')`
 
-  This is not a prepared statement.
+  This is not a prepared statement. Currently you need to sanitize your data before.
+
 ## License
 
 Apache-2.0 © [Wice GmbH](https://wice.de/)

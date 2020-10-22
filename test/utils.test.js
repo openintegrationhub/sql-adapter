@@ -2,10 +2,12 @@
 
 const { expect } = require('chai');
 
+// // eslint-disable-next-line no-unused-vars
 // const { mysqlFetch, mysqlExecute } = require('./../lib/utils/mysql');
+// // eslint-disable-next-line no-unused-vars
 // const { mssqlFetch, mssqlExecute } = require('./../lib/utils/mssql');
-// eslint-disable-next-line no-unused-vars
-const { postgreFetch, postgreExecute } = require('./../lib/utils/postgreSQL');
+// // eslint-disable-next-line no-unused-vars
+// const { postgreFetch, postgreExecute } = require('./../lib/utils/postgreSQL');
 
 describe('DB read', () => {
   before(async () => {
@@ -94,7 +96,7 @@ describe('DB write', () => {
     expect(true).to.equal(true);
   });
 
-  // it('should write to mysql DB', async () => {
+  // it.only('should write to mysql DB', async () => {
   //   const databaseConfig = {
   //     databaseType: 'MySQL',
   //     user: 'root',
@@ -103,7 +105,7 @@ describe('DB write', () => {
   //     port: '3306',
   //     databaseName: 'wice',
   //   };
-  //   const query = 'INSERT INTO address_company (email) VALUES ("testmail@testmail.test")';
+  //   const query = "INSERT INTO address_company (email) VALUES ('testmail@testmail.tester')";
   //
   //   const results = [];
   //   function handleMySQL(data, last) {
@@ -117,7 +119,7 @@ describe('DB write', () => {
   //   expect(result).to.equal(true);
   // });
   //
-  // it.only('should write to PostgreSQL DB', async () => {
+  // it('should write to PostgreSQL DB', async () => {
   //   const databaseConfig = {
   //     databaseType: 'PostgreSQL',
   //     user: 'postgres',
@@ -126,7 +128,7 @@ describe('DB write', () => {
   //     port: '5432',
   //     databaseName: 'testdb',
   //   };
-  //   const query = 'INSERT INTO testtable ("type", "color", "location", "install_date") VALUES ("slideX", "red", "south", "2020-10-28")';
+  //   const query = "INSERT INTO testtable (type, color, location, install_date) VALUES ('slideX', 'red', 'south', '2020-10-28')";
   //
   //   const results = [];
   //   function handlePostgreSQL(data, last) {
@@ -150,7 +152,7 @@ describe('DB write', () => {
   //     port: '1433',
   //     databaseName: 'testdb',
   //   };
-  //   const query = 'INSERT INTO testtable (userId, title) VALUES (77, "Sometitle")';
+  //   const query = "INSERT INTO testtable (userId, title) VALUES (77, 'Sometitle')";
   //
   //   const results = [];
   //   function handleMSSQL(data, last) {
