@@ -10,7 +10,7 @@ describe('DB read', () => {
   before(async () => {
   });
 
-  it('should only test on local', async () => {
+  it.only('should only test on local', async () => {
     expect(true).to.equal(true);
   });
 
@@ -60,7 +60,7 @@ describe('DB read', () => {
     // console.log('Result:', result);
     expect(result).to.equal(true);
   });
- 
+
   it.skip('should connect to SQL', async () => {
     const databaseConfig = {
       databaseType: 'SQL',
@@ -89,7 +89,7 @@ describe('DB write', () => {
   before(async () => {
   });
 
-  it('should only test on local', async () => {
+  it.only('should only test on local', async () => {
     expect(true).to.equal(true);
   });
 
