@@ -40,7 +40,7 @@ The **adapter** supports the following **actions** and **triggers**:
   ---
 
 #### Actions:
-  - Write Query to MySQL database (```addData.js```)
+  - Write Query to SQL/MySQL/PostgreSQL database (```addData.js```)
 
   All placeholders in the query will be replaced with data if found.
 
