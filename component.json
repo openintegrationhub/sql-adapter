@@ -70,7 +70,7 @@
       }
    },
    "triggers":{
-      "getData":{
+      "getDataPolling":{
          "title":"Fetch from SQL database",
          "description":"Fetch from SQL database based on provided Query and send each row to OIH as JSON-Object",
          "type":"polling",
